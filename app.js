@@ -39,7 +39,7 @@
       .domain([1,100])
     
     //Read the data
-     d3.csv("https://gist.githubusercontent.com/Parishkrat/24c7d75ffb231d7e07bc17b91b10f66e/raw/895517b937fa7d1321b117d6f453ef284c6e6d6b/gistfile1.txt",function(data) {
+     d3.csv("data.txt",function(data) {
     
       // create a tooltip
       var tooltip = d3.select("#heatmap")
@@ -80,10 +80,4 @@
         .on("mousemove", mousemove)
         .on("mouseleave", mouseleave)
     })
-    const url="https://gist.githubusercontent.com/Parishkrat/24c7d75ffb231d7e07bc17b91b10f66e/raw/895517b937fa7d1321b117d6f453ef284c6e6d6b/gistfile1.txt";
-    const fetchText=async()=>{
-        const response= await fetch(url);
-        const text=await response.text();
-        console.log(text);
-    };
-    fetchText();
+   
