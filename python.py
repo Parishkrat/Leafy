@@ -5,9 +5,9 @@ while True:
     proceed_r=0
     while (proceed_c==0):
         column=input("Edit value at:\nColumn: ")
-        if(column=="a" or column=="b" or column=="c" or column=="d" or column=="e" or column=="f" or column=="g" or column=="h" or column=="i" or column=="j"):
+        if(ord(column)<ord("j") and ord(column)>ord("a")):
             proceed_c=1
-            
+        
         else:
             proceed_c=0 
             print("Invalid Column")
