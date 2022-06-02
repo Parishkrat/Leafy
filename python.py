@@ -1,8 +1,25 @@
 from string import ascii_lowercase
 
 while True:
-    column=input("Edit value at:\nColumn: ")
-    row=input("Row: ")
+    proceed_c=0
+    proceed_r=0
+    while (proceed_c==0):
+        column=input("Edit value at:\nColumn: ")
+        if(column=="a" or column=="b" or column=="c" or column=="d" or column=="e" or column=="f" or column=="g" or column=="h" or column=="i" or column=="j"):
+            proceed_c=1
+            
+        else:
+            proceed_c=0 
+            print("Invalid Column")
+        
+        
+    while (proceed_r==0):
+        row=input("Row: ")
+        if(int(row)>10 or int(row)<1):
+            proceed_r=0
+            print("Invalid Row")
+        else:
+            proceed_r=1
     new_value=input("New Value: ")
     loc=[column,row]
     #print(loc,new_value)
