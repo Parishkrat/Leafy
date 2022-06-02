@@ -5,11 +5,11 @@ while True:
     proceed_r=0
     while (proceed_c==0):
         column=input("Edit value at:\nColumn: ")
-        if(ord(column)<ord("j") and ord(column)>ord("a")):
+        if(ord(column)<=ord("j") and ord(column)>=ord("a")):
             proceed_c=1
         
         else:
-            proceed_c=0 
+            proceed_c=0
             print("Invalid Column")
         
         
